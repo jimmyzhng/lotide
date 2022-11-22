@@ -1,6 +1,11 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-// Test Case: Check the original array
+// Test Case
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-assertEqual(tail(words).length, 2);
+
+describe("#tail", () => {
+  it("should return true if tail removes the first element of the array", () => {
+    assert.deepEqual(tail(words), ["Lighthouse", "Labs"]);
+  });
+});
